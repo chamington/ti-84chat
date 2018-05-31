@@ -4,9 +4,9 @@ console.log("Test");
 function startDraw() {
 	var myGamePiece = new Array(96);
 	drawArea.start();
-	for (i=0;i<=95;i++){
+	for (i=0;i<=94;i++){
 		myGamePiece[i] = new Array(63);
-		for (j=0;j<=63;j++){
+		for (j=0;j<=62;j++){
 			myGamePiece[i][j] = new component(i,j, tiGreen);
 			myGamePiece[i][j].update();
 			
@@ -16,7 +16,11 @@ function startDraw() {
 
 addEventListener('click',function(evt){
 var rect = document.getElementsByTagName('canvas')[0].getBoundingClientRect();
-	myGamePiece[Math.round((evt.clientX-(rect.left))/4)-1][Math.round((evt.clientY-(rect.top))/4)-1].change();
+	var xComp=Math.round((evt.clientX-(rect.left))/4)-1
+	var yComp=Math.round((evt.clientY-(rect.top))/4)-1
+	if (xComp>=0 && yComp>=0 && xComp <95 && yComp<63){
+		myGamePiece[xComp][yComp].change();
+	}
 	console.log(Math.round((evt.clientX-(rect.left))/4)-1)
 	console.log(Math.round((evt.clientY-(rect.top))/4)-1)
 	console.log("test");
