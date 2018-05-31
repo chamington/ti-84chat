@@ -34,7 +34,7 @@ var drawArea = {
         this.canvas.width = 380;
         this.canvas.height = 252;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        document.getElementById("Title").insertBefore(this.canvas, document.getElementById("Title").childNodes[0]);
         this.frameNo = 0;
     },
     clear : function() {
