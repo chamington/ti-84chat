@@ -1,3 +1,16 @@
+function clear(){
+	if (confirm("Are you sure you want to clear?")) {
+		startDraw();
+	}
+}
+function post(){
+	if (confirm("Are you sure you want to post?")) {
+		var canvas = document.getElementsByTagName('canvas')[0];
+		var img    = canvas.toDataURL("image/png");
+		document.getElementById("testimage").insertAdjacentHTML("afterbegin",'<img style="margin-bottom: 5px" src="'+img+'"/>');
+		startDraw();
+	}
+}
 console.log("Test");
 	var tiGreen = "#839383"
 	var tiBlack = "#1d1b1b"
@@ -26,19 +39,7 @@ var rect = document.getElementsByTagName('canvas')[0].getBoundingClientRect();
 	console.log("test");
 });	
 }
-function post(){
-	if (confirm("Are you sure you want to post?")) {
-		var canvas = document.getElementsByTagName('canvas')[0];
-		var img    = canvas.toDataURL("image/png");
-		document.getElementById("testimage").insertAdjacentHTML("afterbegin",'<img style="margin-bottom: 5px" src="'+img+'"/>');
-		startDraw();
-	}
-}
-function clear(){
-	if (confirm("Are you sure you want to clear?")) {
-		startDraw();
-	}
-}
+
 
 var drawArea = {
     canvas : document.createElement("canvas"),
