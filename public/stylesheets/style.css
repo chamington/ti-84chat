@@ -2,5 +2,7 @@
   font-family: Helvetica, Arial, Sans-Serif;
 	text-align: center;
 	border: 3px solid grey;
-margin: auto;
+	margin: auto;
+	font-size: 7vw;
+	margin-bottom: 10px;
 }
