@@ -21,11 +21,17 @@ var rect = document.getElementsByTagName('canvas')[0].getBoundingClientRect();
 });	
 }
 function post(){
-var canvas = document.getElementsByTagName('canvas')[0];
-var img    = canvas.toDataURL("image/png");
-document.getElementById("testimage").insertAdjacentHTML("afterbegin",'<img style="margin-bottom: 5px" src="'+img+'"/>');
-startDraw();
-
+	if (confirm("Are you sure you want to post?")) {
+		var canvas = document.getElementsByTagName('canvas')[0];
+		var img    = canvas.toDataURL("image/png");
+		document.getElementById("testimage").insertAdjacentHTML("afterbegin",'<img style="margin-bottom: 5px" src="'+img+'"/>');
+		startDraw();
+	}
+}
+function clear(){
+	if (confirm("Are you sure you want to clear?")) {
+		startDraw();
+	}
 }
 
 var drawArea = {
