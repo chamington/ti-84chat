@@ -17,6 +17,8 @@ function startDraw() {
 addEventListener('click',function(evt){
 var rect = document.getElementsByTagName('canvas')[0].getBoundingClientRect();
 	myGamePiece[Math.round((evt.clientX-(rect.left))/4)-1][Math.round((evt.clientY-(rect.top))/4)-1].change();
+	console.log(Math.round((evt.clientX-(rect.left))/4)-1)
+	console.log(Math.round((evt.clientY-(rect.top))/4)-1)
 	console.log("test");
 });	
 }
