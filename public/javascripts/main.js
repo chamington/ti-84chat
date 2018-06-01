@@ -1,4 +1,4 @@
-function clear(){
+function clearr(){
 	console.log("Clearing!");
 	if (confirm("Are you sure you want to clear?")) {
 		startDraw();
